@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root{
+	--primary-color: #0d0d0d;
+	--primary-color-rgb: rgb(13,13,13);
+	--primary-color-rgb: rgba(13,13,13,0.5);
+	--secondary-color: #f2f2f2;
+	--secondary-color-rgb: rgb(242,242,242);
+	--secondary-color-rgb: rgba(242,242,242,0.5);
+	--text-color: #404040;
+	--text-color-rgb: rgb(64,64,64);
+	--text-color-rgba: rgba(64,64,64,0.5);
+	--link-color: #eab436;
+	--link-color-rgb: rgb(234,180,54);
+	--link-color-rgba: rgba(234,180,54,0.5);
+}
+
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/*=============================================
+=            Container comment block            =
+=============================================*/
+
+.container{
+  display: grid;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "a a a m m m m m m m m m "
+  ;
+}
+
+/*=====  End of Container comment block  ======*/
+
+
+
+/*=============================================
+=            Header comment block            =
+=============================================*/
+
+.header{
+  grid-area: h;
+  width:100%;
+  height: 6vh;
+  background-color:var(--text-color-rgb);
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  color: var(--link-color);
+}
+
+.logo{
+  margin-left:1rem;
+}
+.nav-list{
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
+}
+
+.list-item{
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.list-item:hover{
+  color: var(--secondary-color);
+}
+
+/*=====  End of Header comment block  ======*/
+
+
+
+/*=============================================
+=            Main comment block            =
+=============================================*/
+aside{
+  grid-area: a;
+  align-self: left;
+  display:flex;
+  flex-direction:column;
+  width: 25vw;
+  margin: 0;
+  text-align: center;
+  background-color: var(--text-color-rgba);
+  color: var(--secondary-color);
+}
+
+aside h1{
+  margin-bottom:1rem;
+  font-size:2rem;
+  letter-spacing: .2rem;
+  color: var(--link-color);
+}
+
+aside img{
+  border-radius: 50%;
+  width: 80%;
+  transform: scale(.6);
+}
+
+.main{
+  grid-area: m;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+	display:flex;
+	justify-content:space-between;
+	width:80%;
+	margin: 3rem auto;
+	background-color: var(--secondary-color);
+}
+
+.description{
+	color: var(--text-color);
+	display:flex;
+	flex-direction:column;
+	margin-right: 1rem;
+}
+
+.titre-livre{
+	margin-top: 1rem;
+  text-transform: uppercase;
+	letter-spacing: .05rem;
+	color: var(--primary-color);
+}
+.autheur{
+	margin: 0.5rem 0;
+	font-size: 1rem;
+}
+.description .genre{
+	margin-bottom:1.5rem;
+}
+
+.description-text{
+	margin-bottom: 0.8rem;
+}
+
+
+img{
+	display:flex;
+	align-self:center;
+	width: 250px;
+	height: 340px;
+	margin:0 1rem;
+	border: 2px solid var(--link-color);
+	box-shadow: 2px 2px 2px rgba(115,115,115,0.5), -2px -2px 2px rgba(115,115,115,0.5);
+}
+
+.links{
+	display:flex;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+}
+
+.btn{
+	all: unset;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--link-color);
+	width: 40%;
+	padding: 0.6rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.fab{
+	color: var(--text-color); 
+	font-size: 1.5rem;
+}
+/*=====  End of Main comment block  ======*/

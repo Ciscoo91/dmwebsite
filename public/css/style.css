@@ -1,118 +1,152 @@
-body{
-    margin:0;
-    padding:0;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root{
+	--primary-color: #0d0d0d;
+	--primary-color-rgb: rgb(13,13,13);
+	--primary-color-rgb: rgba(13,13,13,0.5);
+	--secondary-color: #f2f2f2;
+	--secondary-color-rgb: rgb(242,242,242);
+	--secondary-color-rgba: rgba(242,242,242,0.5);
+	--text-color: #404040;
+	--text-color-rgb: rgb(64,64,64);
+	--text-color-rgba: rgba(64,64,64,0.5);
+	--link-color: #eab436;
+	--link-color-rgb: rgb(234,180,54);
+	--link-color-rgba: rgba(234,180,54,0.5);
 }
 
-ul{
-    list-style-type: none;
-    margin:0;
-    padding: 0;
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
 }
+
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+/*=============================================
+=            Container comment block            =
+=============================================*/
 
 .container{
-    width: 90%;
-    margin:auto;
-    background-color: #eed;
+  display: grid;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "m m m m m m m m m m m m "
+  ;
+  background: url("https://source.unsplash.com/lR8E-4q3ux0/");
+  background-size: cover;
+  height: 100vh;
+}
+
+/*=====  End of Container comment block  ======*/
+
+
+
+/*=============================================
+=            Header comment block            =
+=============================================*/
+
+.header{
+  grid-area: h;
+  width:100%;
+  height: 6vh;
+  background-color:var(--text-color-rgb);
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  color: var(--link-color);
 }
 
 .logo{
-    margin: 0.5rem 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
+  margin-left:1rem;
 }
-
-.header{
-    display: flex;
-    justify-content: space-between;
+.nav-list{
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
 }
 
 .list-item{
-    margin:.5rem 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 
-.nav-list{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-main{
-    display: flex;
-    justify-content:space-between;
-}
-
-.image .about{
-    max-width:45%;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.image{
-    margin: 2rem;
-}
-
-.about p, .about h1{
-    width: 100%;
-}
-
-.about{
-    margin:2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.header{
-    width: 100%;
-    background-color: #f00;
+.list-item:hover{
+  color: var(--secondary-color);
 }
 
 .hammenu{
-    display: none;
+	display: none;
 }
 
-@media screen and (max-width: 875px){
-    main{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+/*=====  End of Header comment block  ======*/
 
-    .hammenu{
-        display:flex;
-        cursor:pointer;
-        background-color: green;
-    }
 
-    .active{
-        display: flex !important;
-    }
+/*=============================================
+=            Main comment block            =
+=============================================*/
 
-    .inactive{
-        display:none !important;
-    }
-
-    .nav-list{
-        display: none;
-    }
-
-    .nav-bar{
-        position: absolute;
-        top:35.2px;
-    }
-
-    .fas{
-        color:#ed0;
-        font-size: 2rem;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        right: 0;
-    }
-
+.main-content{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:repeat(2,1fr);
+  color: var(--secondary-color);
 }
+
+.main-presentation{
+  grid-row:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media{
+  grid-row:2;
+}
+
+.main-title{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description{
+  margin-bottom: 1rem;
+}
+
+.about-btn{
+  padding: .6rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 2px;
+}
+
+.about-btn:hover{
+  background-color: var(--secondary-color-rgba);
+}
+
+.social-media{
+  width: 100px;
+  align-self: center;
+  justify-self: center;
+}
+.social-list{
+  display: flex;
+  justify-content: space-between;
+}
+/*=====  End of Main comment block  ======*/
 

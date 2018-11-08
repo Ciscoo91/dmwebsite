@@ -22,6 +22,11 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
 
 /*=============================================
 =            Container comment block            =
@@ -70,6 +75,10 @@
 
 .list-item:hover{
   color: var(--secondary-color);
+}
+
+.hammenu{
+	display: none;
 }
 
 /*=====  End of Header comment block  ======*/

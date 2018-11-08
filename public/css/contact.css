@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root{
+	--primary-color: #0d0d0d;
+	--primary-color-rgb: rgb(13,13,13);
+	--primary-color-rgb: rgba(13,13,13,0.5);
+	--secondary-color: #f2f2f2;
+	--secondary-color-rgb: rgb(242,242,242);
+	--secondary-color-rgba: rgba(242,242,242,0.5);
+	--text-color: #404040;
+	--text-color-rgb: rgb(64,64,64);
+	--text-color-rgba: rgba(64,64,64,0.5);
+	--link-color: #eab436;
+	--link-color-rgb: rgb(234,180,54);
+	--link-color-rgba: rgba(234,180,54,0.5);
+  --box-shadow:rgba(64,64,64,0.2);
+}
+
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+/*=============================================
+=            Container comment block            =
+=============================================*/
+
+.container{
+  display: grid;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "m m m m m m m m m m m m "
+  ;
+  /* background: url("https://source.unsplash.com/lR8E-4q3ux0/"); */
+  background-size: cover;
+  height: 100vh;
+}
+
+/*=====  End of Container comment block  ======*/
+
+
+
+/*=============================================
+=            Header comment block            =
+=============================================*/
+
+.header{
+  grid-area: h;
+  width:100%;
+  height: 6vh;
+  background-color:var(--text-color-rgb);
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  color: var(--link-color);
+}
+
+.logo{
+  margin-left:1rem;
+}
+.nav-list{
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
+}
+
+.list-item{
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.list-item:hover{
+  color: var(--secondary-color);
+}
+
+.hammenu{
+	display: none;
+}
+
+/*=====  End of Header comment block  ======*/
+
+
+/*=============================================
+=            Main comment block            =
+=============================================*/
+
+.main-content{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 70%;
+  height: 80%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #fff;
+  border-radius:3px;
+  box-shadow: 5px 5px 5px var(--box-shadow), -5px 5px 5px var(--box-shadow);
+}
+
+.form--title{
+  font-size: 3rem;
+  letter-spacing: .3rem;
+  color: var(--text-color);
+  position: absolute;
+  top: 2%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.form--section{
+  width: 95%;
+  height: 75%;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column; */
+  justify-content: space-between;
+  background-color: red;
+}
+/*=====  End of Main comment block  ======*/
+

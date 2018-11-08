@@ -21,5 +21,4 @@ hammenu.addEventListener('click', (e) => {
         navbar.classList.add('inactive');
     }
 
-
 });

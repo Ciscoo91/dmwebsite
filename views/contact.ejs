@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+  <div class="container">
+    <% include layout/header %>
+    <main class=main-content>
+      <form action=# class=form--section>
+        <div class=form--title><strong class=form--title--top>Contact Us</strong></div>
+        <div>
+          <input type=text name=firstname id=firstname placeholder="First Name">
+          <input type=text name=lastname id=lastname placeholder="Last Name">
+          <input type=text name=email id=email placeholder="Enter your email">
+          <textarea name=comment id=comment cols=30 rows=10 placeholder="Vôtre message">
+          </textarea>
+          <button type=submit>Submit</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+
+</html>

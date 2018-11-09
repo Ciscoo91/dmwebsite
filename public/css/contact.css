@@ -4,7 +4,7 @@
 :root{
 	--primary-color: #0d0d0d;
 	--primary-color-rgb: rgb(13,13,13);
-	--primary-color-rgb: rgba(13,13,13,0.5);
+	--primary-color-rgba: rgba(13,13,13,0.5);
 	--secondary-color: #f2f2f2;
 	--secondary-color-rgb: rgb(242,242,242);
 	--secondary-color-rgba: rgba(242,242,242,0.5);
@@ -107,7 +107,7 @@ li{
   flex-direction: column;
   justify-content: center;
 
-  background-color: #fff;
+  background-color: var(--primary-color-rgba);
   border-radius:3px;
   box-shadow: 5px 5px 5px var(--box-shadow), -5px 5px 5px var(--box-shadow);
 }
@@ -115,21 +115,46 @@ li{
 .form--title{
   font-size: 3rem;
   letter-spacing: .3rem;
-  color: var(--text-color);
+  color: var(--secondary-color);
   position: absolute;
   top: 2%;
   left:50%;
   transform: translateX(-50%);
+  
 }
 
 .form--section{
   width: 95%;
   height: 75%;
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: red;
+  
 }
+
+.form--inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  height: 100%;
+  margin: 1rem auto;
+}
+
+.form--inputs input, .form--inputs textarea, .form--inputs button{
+  padding: .6rem;
+  border-radius: 3px;
+  border:none;
+}
+
+.btn-submit{
+  background-color: var(--link-color);
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+
 /*=====  End of Main comment block  ======*/
 

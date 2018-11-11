@@ -27,4 +27,8 @@ app.get('/contact', (req, res) => {
     res.render("contact");
 });
 
+app.get('/tosekwatv', (req, res) => {
+    res.render("tosekwatv");
+});
+
 app.listen(port);

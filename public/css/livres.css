@@ -37,6 +37,7 @@ a{
   grid-template-areas:
     "h h h h h h h h h h h h "
     "m m m m m m m m m m m m "
+		"f f f f f f f f f f f f "
   ;
 }
 
@@ -88,30 +89,6 @@ a{
 /*=============================================
 =            Main comment block            =
 =============================================*/
-aside{
-  grid-area: a;
-  align-self: left;
-  display:flex;
-  flex-direction:column;
-  width: 25vw;
-  margin: 0;
-  text-align: center;
-  background-color: var(--text-color-rgba);
-  color: var(--secondary-color);
-}
-
-aside h1{
-  margin-bottom:1rem;
-  font-size:2rem;
-  letter-spacing: .2rem;
-  color: var(--link-color);
-}
-
-aside img{
-  border-radius: 50%;
-  width: 80%;
-  transform: scale(.6);
-}
 
 .main{
   grid-area: m;
@@ -150,6 +127,7 @@ aside img{
 
 .description-text{
 	margin-bottom: 0.8rem;
+	color: var(--text-color-rgb);
 }
 
 
@@ -186,3 +164,69 @@ img{
 	font-size: 1.5rem;
 }
 /*=====  End of Main comment block  ======*/
+
+
+/*=============================================
+=            Footer comment block            =
+=============================================*/
+
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: var(--text-color);
+	display: flex;
+	justify-content: space-between;
+	padding: .7rem .5rem;
+	align-items: center;
+}
+
+footer div{
+	height: 100%;
+	display:flex;
+	align-items:center;
+	color: var(--secondary-color);
+}
+
+.footer-contact{
+	flex-direction:column;
+	justify-content:center;
+	align-items:flex-start;
+	flex: 1;
+}
+
+.footer__label{
+	color: var(--link-color);
+	padding: 0 .4rem;
+}
+
+.footer-social{
+	border-right: 1px solid var(--secondary-color-rgba);
+	border-left: 1px solid var(--secondary-color-rgba);
+	border-radius: 3px;
+	flex: 2;
+}
+
+.footer-social{
+	justify-content: center;
+}
+
+.footer-social .fab{
+	margin: 0 .8rem;
+	font-size: 2.4rem;
+	cursor: pointer;
+	color: var(--link-color);
+}
+
+.fab:hover{
+	color: var(--secondary-color);
+}
+
+.footer-copy{
+	flex: 1;
+	justify-content: flex-start;
+	text-align: right;
+	padding: 0 .8rem;
+}
+
+/*=====  End of Footer comment block  ======*/
+

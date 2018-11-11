@@ -150,3 +150,67 @@ li{
 }
 /*=====  End of Main comment block  ======*/
 
+
+/*=============================================
+=            Footer comment block            =
+=============================================*/
+
+
+footer{
+	width: 90%;
+	height: 100px;
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-between;
+	padding: .7rem .5rem;
+	align-items: center;
+}
+
+footer div{
+	height: 100%;
+	display:flex;
+	align-items:center;
+}
+
+.footer-contact{
+	flex-direction:column;
+	justify-content:center;
+	align-items:flex-start;
+	flex: 1;
+}
+
+.footer__label{
+	color: var(--link-color);
+	padding: 0 .4rem;
+}
+
+.footer-social{
+	border-style: solid;
+	border-color: var(--primary-color) var(--secondary-color-rgba) var(--primary-color) var(--secondary-color-rgba);
+	border-radius: 3px;
+	flex: 2;
+}
+
+.footer-social{
+	justify-content: center;
+}
+
+.footer-social .fab{
+	margin: 0 .8rem;
+	font-size: 2.4rem;
+	cursor: pointer;
+}
+
+.fab:hover{
+	color: var(--link-color);
+}
+
+.footer-copy{
+	flex: 1;
+	justify-content: flex-start;
+	text-align: right;
+	padding: 0 .8rem;
+}
+
+/*=====  End of Footer comment block  ======*/
+

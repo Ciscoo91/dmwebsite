@@ -15,6 +15,7 @@
 	--link-color-rgb: rgb(234,180,54);
 	--link-color-rgba: rgba(234,180,54,0.5);
 	--main-color: rgb(241,242,246);
+	--box-shadow:  rgba(115,115,115,0.3);
 }
 
 *{
@@ -120,7 +121,7 @@ a{
   grid-area: m;
   display: flex;
   flex-direction: column;
-  background-color: var (var(--main-color));
+  background-color: (var(--main-color));
 }
 
 .card{
@@ -163,16 +164,16 @@ a{
 }
 
 
-img{
+.img{
 	display:flex;
 	align-self:center;
 	width: 300px;
 	height: 408px;
 	margin:0 1rem;
 	/* border: 2px solid var(--link-color); */
-	box-shadow: 5px 5px 5px rgba(115,115,115,0.3), -5px -5px 5px rgba(115,115,115,0.3);}
+	box-shadow: 5px 5px 5px var(--box-shadow), -5px -5px 5px var(--box-shadow);
 	/* transform: scale(1.2); */
-
+}
 .links{
 	display:flex;
 	justify-content: space-between;

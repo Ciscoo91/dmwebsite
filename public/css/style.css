@@ -148,6 +148,10 @@ li{
   display: flex;
   justify-content: space-between;
 }
+
+.social-link{
+  font-size: 1.3rem;
+}
 /*=====  End of Main comment block  ======*/
 
 

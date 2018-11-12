@@ -183,6 +183,7 @@ footer div{
 	height: 100%;
 	display:flex;
 	align-items:center;
+  color: var(--secondary-color);
 }
 
 .footer-contact{

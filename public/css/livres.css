@@ -14,6 +14,8 @@
 	--link-color: #eab436;
 	--link-color-rgb: rgb(234,180,54);
 	--link-color-rgba: rgba(234,180,54,0.5);
+	--main-color: rgb(241,242,246);
+	--box-shadow:  rgba(115,115,115,0.3);
 }
 
 *{
@@ -90,10 +92,36 @@ a{
 =            Main comment block            =
 =============================================*/
 
+.aside{
+	grid-area: a;
+	align-self: left;
+	display:flex;
+	flex-direction:column;
+	width: 25vw;
+	margin: 0;
+	text-align: center;
+	background-color: var(--text-color-rgba);
+	color: var(--secondary-color);
+}
+  
+.aside h1{
+	margin-bottom:1rem;
+	font-size:2rem;
+	letter-spacing: .2rem;
+	color: var(--link-color);
+}
+  
+.aside img{
+	border-radius: 50%;
+	width: 80%;
+	transform: scale(.6);
+}
+  
 .main{
   grid-area: m;
   display: flex;
   flex-direction: column;
+  background-color: (var(--main-color));
 }
 
 .card{
@@ -101,18 +129,23 @@ a{
 	justify-content:space-between;
 	width:80%;
 	margin: 3rem auto;
-	background-color: var(--secondary-color);
+	/* background-color: var(--secondary-color); */
+	height: 380px;
+	border-bottom: 1px solid var(--text-color-rgba);
+	padding-bottom: 5rem;
 }
 
 .description{
 	color: var(--text-color);
 	display:flex;
 	flex-direction:column;
+	justify-content: space-between;
 	margin-right: 1rem;
+	margin-left: 3rem;
 }
 
 .titre-livre{
-	margin-top: 1rem;
+	margin-top: 1.5rem;
   text-transform: uppercase;
 	letter-spacing: .05rem;
 	color: var(--primary-color);
@@ -122,25 +155,25 @@ a{
 	font-size: 1rem;
 }
 .description .genre{
-	margin-bottom:1.5rem;
+	margin-bottom:2.5rem;
 }
 
 .description-text{
-	margin-bottom: 0.8rem;
-	color: var(--text-color-rgb);
+	margin-bottom: 2.8rem;
+	/* color: var(--text-color-rgb); */
 }
 
 
-img{
+.img{
 	display:flex;
 	align-self:center;
-	width: 250px;
-	height: 340px;
+	width: 300px;
+	height: 408px;
 	margin:0 1rem;
-	border: 2px solid var(--link-color);
-	box-shadow: 2px 2px 2px rgba(115,115,115,0.5), -2px -2px 2px rgba(115,115,115,0.5);
+	/* border: 2px solid var(--link-color); */
+	box-shadow: 5px 5px 5px var(--box-shadow), -5px -5px 5px var(--box-shadow);
+	/* transform: scale(1.2); */
 }
-
 .links{
 	display:flex;
 	justify-content: space-between;
@@ -150,13 +183,15 @@ img{
 .btn{
 	all: unset;
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	background-color: var(--link-color);
-	width: 40%;
+	width: 33%;
+	min-height: 1.2rem;
 	padding: 0.6rem;
 	color: #fff;
 	cursor: pointer;
+	border-radius: 10px;
 }
 
 .fab{

@@ -129,7 +129,6 @@ a{
 	justify-content:space-between;
 	width:80%;
 	margin: 3rem auto;
-	/* background-color: var(--secondary-color); */
 	height: 380px;
 	border-bottom: 1px solid var(--text-color-rgba);
 	padding-bottom: 5rem;
@@ -160,7 +159,6 @@ a{
 
 .description-text{
 	margin-bottom: 2.8rem;
-	/* color: var(--text-color-rgb); */
 }
 
 
@@ -169,10 +167,10 @@ a{
 	align-self:center;
 	width: 300px;
 	height: 408px;
+	min-width: 300px;
+	min-height: 408px;
 	margin:0 1rem;
-	/* border: 2px solid var(--link-color); */
 	box-shadow: 5px 5px 5px var(--box-shadow), -5px -5px 5px var(--box-shadow);
-	/* transform: scale(1.2); */
 }
 .links{
 	display:flex;

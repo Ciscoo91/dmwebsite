@@ -39,6 +39,7 @@ li{
 
 .container{
   display: grid;
+	grid-template-rows: auto 100% auto;
   grid-template-areas:
     "h h h h h h h h h h h h "
     "m m m m m m m m m m m m "
@@ -99,7 +100,52 @@ li{
 
 .main-content{
 	grid-area: m;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
 	height: 100%;
+	width: 95%;
+	margin: auto;
+	padding: 2rem;
+}
+
+.main-logo{
+	margin: 0 auto; 
+	padding-top: 2rem;
+	width: 35vw;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+.logo-tosekwa{
+	width: 300px;
+	height: 300px;
+}
+
+.youtube-video{
+	width: 35vw;
+	height: auto;
+	margin: 3rem;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	font-family: 'Montserrat', sans-serif;
+	padding:2rem;
+	border-radius:3px;
+	background-color: var(--secondary-color-rgba);
+}
+
+.details{
+	margin: .8rem auto;
+	width:409px;
+	height: auto;
+	text-align:justify;
+}
+
+.details h4{
+	margin: .4rem 0;
+	color: var(--text-color);
 }
 
 /*=====  End of Main comment block  ======*/
@@ -112,6 +158,7 @@ li{
 
 
 footer{
+	margin-top:3rem;
 	grid-area: f;
 	width: 100%;
 	height: 100px;

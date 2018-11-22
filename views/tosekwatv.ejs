@@ -9,25 +9,47 @@
   <link rel="stylesheet" href="css/tosekwatv.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
     <% include layout/header %>
-    <main class="main-content">
+    <main class="main-content" id="main-content">
       <aside class="main-logo">
-        <img src="images/Tosekwa-logo.svg" alt="logo mouvement tosekwa">
+        <img class="logo-tosekwa" src="images/Tosekwa-logo.svg" alt="logo mouvement tosekwa">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas sunt labore eos ab ut cupiditate facere possimus
+        et ex reiciendis nihil iure placeat culpa, minus repellat rerum eaque. Unde, velit.
       </aside>
-      <div class="main-info">
-        <div class="info-video">
-          <video src="images/didier.mp4" controls></video>
+      <% fetchData.items.forEach((item)=>{%>
+      <% 
+      
+        var title = item.snippet.title;
+        var desc = item.snippet.description.substring(0, 100);
+        var vid = item.snippet.resourceId.videoId;
+      
+      %>
+      <div class="video-container">
+        <div class="youtube-video">
+          <iframe width="409" height="230" src="https://www.youtube.com/embed/<%=vid%>" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+          <div class="details">
+            <h4>
+              <%=title%>
+            </h4>
+            <p>
+              <%=desc%>
+            </p>
+          </div>
         </div>
       </div>
+      <% }); %>
     </main>
+    <%  %>
   </div>
   <% include layout/footer %>
   <script src="js/index.js"></script>
-  <script src="js/facebook-videos-api.js"></script>
 </body>
 
 </html>

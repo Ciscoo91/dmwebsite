@@ -36,6 +36,10 @@ app.get('/livres', (req, res) => {
     res.render('livres');
 });
 
+app.get('/livrebleu', (req, res) => {
+    res.render('livrebleu');
+});
+
 app.get('/biographie', (req, res) => {
     res.render('about');
 });

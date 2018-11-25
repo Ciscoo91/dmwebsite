@@ -28,6 +28,10 @@ a{
 	text-decoration: none;
 }
 
+li{
+	list-style-type: none;
+}
+
 /*=============================================
 =            Container comment block            =
 =============================================*/
@@ -83,6 +87,42 @@ a{
 .hammenu{
 	display: none;
 }
+
+
+/*
+**** dropdow item
+**
+**/
+
+.dropdown-list{
+	position: relative;
+}
+
+.dropdown-item{
+	display: none;
+	position: absolute;
+	background-color: var(--text-color-rgb);
+	top: 3vh;
+	width: 6rem;
+	padding: .4rem .4rem .4rem .1rem;
+	color: var(--link-color);
+	opacity:0;
+}
+
+.dropdown-item:hover{
+	color: var(--secondary-color);
+}
+
+.dropdown-item:focus{
+	display: block;
+	opacity: 1;
+}
+
+.dropdown-list:hover .dropdown-item{
+	display: block;
+	opacity: 1;
+}
+
 
 /*=====  End of Header comment block  ======*/
 

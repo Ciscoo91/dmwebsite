@@ -83,7 +83,6 @@ app.post('/contact', urlEncodedParser, (req, res) => {
 });
 
 app.get('/tosekwatv', (req, res) => {
-    console.log(config);
     fetch(url)
         .then(response => response.json())
         .then(data => {

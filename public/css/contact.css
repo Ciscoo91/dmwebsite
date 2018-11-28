@@ -137,31 +137,20 @@ li{
 =============================================*/
 
 .main-content{
-  position: absolute; 
-  top:50%; 
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  transform: translate(-50%,-50%);
+	grid-area: m;
+  width: 90%;
+  height: 100%;
+	margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+	align-items: center;
   background-color: var(--primary-color-rgba);
   border-radius:3px;
   box-shadow: 5px 5px 5px var(--box-shadow), -5px 5px 5px var(--box-shadow);
 }
 
-.form--title{
-  font-size: 3rem;
-  letter-spacing: .3rem;
-  color: var(--secondary-color);
-  position: absolute;
-  top: 2%;
-  left:50%;
-  transform: translateX(-50%);
-  
-}
+
 
 .form--section{
   width: 95%;
@@ -170,30 +159,44 @@ li{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+	align-items: center;
+}
+
+.form--title{
+  font-size: calc(100vw - 95vw);
+	margin-bottom:2rem;
+  letter-spacing: .3rem;
+  color: var(--secondary-color);
 }
 
 .form--inputs{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 70%;
+  width: 50%;
   height: 100%;
   margin: 1rem auto;
 }
 
-.form--inputs input, .form--inputs textarea, .form--inputs button{
-  padding: .6rem;
+.form--inputs input, .form--inputs textarea{
+  padding: .7rem;
   border-radius: 3px;
   border:none;
+	margin-bottom: 1rem;
 }
 
 .btn-submit{
-  background-color: var(--link-color);
-  color: var(--secondary-color);
+	align-self: center;
+	width: 30%;
+	height: 4.5rem;
+	/* padding: .7rem; */
+  border-radius: 3px;
+  border:none;
+  cursor: pointer;
   font-size: 1.2rem;
   letter-spacing: .2rem;
-  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--link-color);
 }
 
 
@@ -206,8 +209,9 @@ li{
 
 
 footer{
-  grid-area: f;
-  margin:0;
+	/* position: absolute;
+	bottom:0; */
+	margin-top: 3rem;
 	width: 100%;
 	height: 100px;
 	background-color: var(--text-color);
@@ -221,7 +225,7 @@ footer div{
 	height: 100%;
 	display:flex;
 	align-items:center;
-  color: var(--secondary-color);
+	color: var(--secondary-color);
 }
 
 .footer-contact{
@@ -237,10 +241,9 @@ footer div{
 }
 
 .footer-social{
-	border-right: 1px solid var(--secondary-color-rgba);
-	border-left: 1px solid var(--secondary-color-rgba);
 	border-radius: 3px;
 	flex: 2;
+	justify-content: flex-end;
 }
 
 .footer-social{
@@ -260,10 +263,150 @@ footer div{
 
 .footer-copy{
 	flex: 1;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	text-align: right;
 	padding: 0 .8rem;
 }
 
 /*=====  End of Footer comment block  ======*/
 
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	/* à copier partout */
+  header{
+    width:100%;
+  }
+ 
+  header{
+		position: relative;
+		width:100%;
+		height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    padding: .5rem;
+    border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:2.5rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+	}
+
+	.content-margin{
+		margin-top: 10rem;
+	}
+
+  /*fin de à copier partout */
+
+	.main-content{
+		width:95%;
+		height: 100%;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form--section{
+		height:80%;
+		display: flex;
+		flex-direction:column;
+		justify-content: space-between;
+	}
+
+
+	.form--title{
+		font-size: 2rem;
+	}
+
+	.btn-submit{
+		min-width: 70%;
+		text-align: center;
+	}
+
+	footer{
+		height: 15vh;
+		display:flex;
+		flex-direction:column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-social .fab{
+		font-size:1.2rem;
+	}
+}
+
+/*=====  End of Tablet comment block  ======*/
+
+@media screen and (max-width: 480px){
+
+	.main-content{
+		border-radius: none;
+		width: 95%;
+	}
+
+	.form--inputs{
+		width: 100%;
+	}
+
+	.form--inputs input, .form--inputs textarea{
+		width: 90%;
+	}
+
+	
+}

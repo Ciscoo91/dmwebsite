@@ -45,6 +45,7 @@ li{
     "m m m m m m m m m m m m "
 		"f f f f f f f f f f f f "
   ;
+	grid-template-columns: auto 100% auto;
 }
 
 /*=====  End of Container comment block  ======*/
@@ -132,7 +133,7 @@ li{
 =            Main comment block            =
 =============================================*/
   
-.main{
+.main-content{
   grid-area: m;
   display: flex;
   flex-direction: column;
@@ -154,8 +155,7 @@ li{
 	display:flex;
 	flex-direction:column;
 	justify-content: space-between;
-	margin-right: 1rem;
-	margin-left: 3rem;
+	margin: 1rem 1rem;;
 }
 
 .titre-livre{
@@ -205,6 +205,7 @@ li{
 	color: #fff;
 	cursor: pointer;
 	border-radius: 10px;
+	font-size: calc(100%-25%);
 }
 
 .fab{
@@ -219,6 +220,9 @@ li{
 =============================================*/
 
 footer{
+	/* position: absolute;
+	bottom:0; */
+	margin-top: 3rem;
 	width: 100%;
 	height: 100px;
 	background-color: var(--text-color);
@@ -248,10 +252,9 @@ footer div{
 }
 
 .footer-social{
-	border-right: 1px solid var(--secondary-color-rgba);
-	border-left: 1px solid var(--secondary-color-rgba);
 	border-radius: 3px;
 	flex: 2;
+	justify-content: flex-end;
 }
 
 .footer-social{
@@ -271,10 +274,210 @@ footer div{
 
 .footer-copy{
 	flex: 1;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	text-align: right;
 	padding: 0 .8rem;
 }
 
 /*=====  End of Footer comment block  ======*/
+
+@media screen and (max-width: 1200px){
+
+	.card{
+		width: 100%;
+	}
+	.description-text{
+		width: 100%;
+	}
+}
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	*{
+		margin:0;
+		padding:0;
+	}
+	/* à copier partout */
+ 
+  .header{
+		position: relative;
+		width:100%;
+		min-height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    padding: .5rem;
+    border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:3rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+	}
+
+	.content-margin{
+		margin-top: 10rem;
+	}
+
+	.main-content{
+		width:100%;
+		height: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card{
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		margin: 1rem auto;
+		padding: 0;
+		width: 100vw;
+		height: auto;
+		/* background-color: #eee; */
+	}
+
+	.image{
+		width: calc(100% - 75vw);
+		height: auto;
+		margin: 0.5rem 1rem;
+	}
+
+	.description{
+		height: 50%;
+	}
+
+	.info-livres{
+		font-size: 1rem;
+		margin:0 auto;
+		text-align:center;
+		display:flex;
+		flex-direction:column;
+	}
+
+	.titre-livre{
+		margin: 0.5rem auto;
+		padding: 2rem auto;
+		width: 100%;
+		text-align: left;
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.autheur{
+		font-size: .8rem;
+		width: 100%;
+		text-align: center;
+	}
+
+	.genre{
+		font-size: 1rem;
+		margin: .4rem auto;
+		color: var(--text-color-rgba);
+	}
+
+	.description-text{
+		font-size: 1rem;
+		padding: .5rem;
+		width: 95%;
+		height: auto;
+		margin:0 auto;
+		line-height:1.5rem;
+		text-align: justify; 
+	}
+
+	.links{
+		display:flex;
+		flex-direction: row;
+	}
+
+	.btn{
+		all: unset;
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: var(--link-color);
+		width: 30%;
+		margin: 1rem auto;
+		height: auto;
+		padding: 0.6rem;
+		color: #fff;
+		cursor: pointer;
+		border-radius: 3px;
+		font-size: calc(100% - 25%);
+	}
+
+	.fab{
+		color: var(--text-color); 
+		font-size: 1rem;
+	}
+  /*fin de à copier partout */
+	footer{
+		height: 15vh;
+		display:flex;
+		flex-direction:column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-social .fab{
+		font-size:1.2rem;
+	}
+}
+
+/*=====  End of Tablet comment block  ======*/
 

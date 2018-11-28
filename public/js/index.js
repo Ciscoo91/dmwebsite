@@ -1,24 +1,12 @@
-let hammenu = document.querySelector(".hammenu");;
-let bars = document.querySelector(".fa-bars");
-let navbar = document.querySelector(".navbar");
-let navList = document.querySelector('.nav-list');
-let mediumSize = 875;
+let hamMenu = document.getElementById("hammenu");
+let navbar = document.getElementById('navbar');
+let bar = document.querySelector(".fa-bars");
+let content = document.querySelector(".main-content");
+let dropdownList = document.getElementById('dropdown-link');
 
 
-if (window.innerWidth <= `${mediumSize}px`) {
-    navbar.style.display = "none";
-    navbar.classList.add('.inactive-navbar')
-}
 
-hammenu.addEventListener('click', (e) => {
-
-    if (navbar.classList.contains('.inactive')) {
-        navbar.classList.toggle('.active-navbar');
-        navbar.classList.remove('navbar');
-        navlist.classList.add('.active');
-    } else {
-        navbar.classList.remove('.active-navbar');
-        navbar.classList.add('inactive');
-    }
-
+hamMenu.addEventListener("click", () => {
+    navbar.classList.toggle('active-navbar');
+    content.classList.toggle('content-margin');
 });

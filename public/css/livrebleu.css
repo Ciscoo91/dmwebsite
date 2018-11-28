@@ -173,9 +173,11 @@ li{
 =            Footer comment block            =
 =============================================*/
 
+
 footer{
-  position: absolute;
-  bottom:0;
+	/* position: absolute;
+	bottom:0; */
+	margin-top: 3rem;
 	width: 100%;
 	height: 100px;
 	background-color: var(--text-color);
@@ -205,10 +207,9 @@ footer div{
 }
 
 .footer-social{
-	border-right: 1px solid var(--secondary-color-rgba);
-	border-left: 1px solid var(--secondary-color-rgba);
 	border-radius: 3px;
 	flex: 2;
+	justify-content: flex-end;
 }
 
 .footer-social{
@@ -228,10 +229,120 @@ footer div{
 
 .footer-copy{
 	flex: 1;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	text-align: right;
 	padding: 0 .8rem;
 }
-
 /*=====  End of Footer comment block  ======*/
+
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	/* à copier partout */
+  header{
+    width:100%;
+  }
+ 
+  header{
+		position: relative;
+		width:100%;
+		height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    padding: .5rem;
+    border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:2.5rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+	}
+
+	.content-margin{
+		margin-top: 10rem;
+	}
+
+  /*fin de à copier partout */
+
+	.main-content{
+		width:100%;
+		height: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main-description{
+		font-size: calc(100%-25%);
+		text-align: center;
+	}
+
+	footer{
+		height: 15vh;
+		display:flex;
+		flex-direction:column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-social .fab{
+		font-size:1.2rem;
+	}
+}
+
+/*=====  End of Tablet comment block  ======*/
 

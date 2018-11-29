@@ -481,3 +481,9 @@ footer div{
 
 /*=====  End of Tablet comment block  ======*/
 
+@media screen and (max-width: 480px){
+	.btn{
+		width: 35%;
+		text-align: center;
+	}
+}

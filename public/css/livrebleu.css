@@ -40,6 +40,7 @@ li{
 
 .container{
   display: grid;
+	grid-template-columns: auto 100% auto;
   grid-template-areas:
     "h h h h h h h h h h h h "
     "m m m m m m m m m m m m "
@@ -175,8 +176,8 @@ li{
 
 
 footer{
-	/* position: absolute;
-	bottom:0; */
+	position: absolute;
+	bottom:0;
 	grid-area: f;
 	margin-top: 3rem;
 	width: 100%;
@@ -184,7 +185,7 @@ footer{
 	background-color: var(--text-color);
 	display: flex;
 	justify-content: space-between;
-	padding: .7rem .5rem;
+	/* padding: .7rem .5rem; */
 	align-items: center;
 }
 

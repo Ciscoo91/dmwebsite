@@ -398,6 +398,7 @@ footer div{
 	.main-content{
 		border-radius: none;
 		width: 95%;
+		margin-bottom: 4rem;
 	}
 
 	.form--section{

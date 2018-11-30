@@ -327,5 +327,8 @@ li{
 		color: var(--link-color);
 	}
 
+	footer{
+		padding: 0;
+	}
 
 }

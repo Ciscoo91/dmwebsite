@@ -44,7 +44,7 @@ li{
     "m m m m m m m m m m m m "
   ;
   /* background: url("https://source.unsplash.com/lR8E-4q3ux0/"); */
-  background: url("../images/dm.jpg");
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/dm.jpg");
   background-size: cover;
 	background-position: center 15%;
   height: 100%;
@@ -150,11 +150,12 @@ li{
 .main-content::before{
 	position:absolute;
 	top:0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 100;
 }
-
 
 
 .main-presentation{
@@ -163,13 +164,11 @@ li{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-	z-index: 1000;
 }
 
 .social-media{
 	margin-top:2rem;
   grid-row:2;
-	z-index: 1000;
 }
 
 .social-list{

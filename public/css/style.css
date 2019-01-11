@@ -73,9 +73,11 @@ li{
   margin-left:1rem;
 }
 .nav-list{
-  list-style: none;
+	height: 3rem;
   display:flex;
   justify-content: space-between;
+	align-items:center; 
+  list-style: none;
 }
 
 .list-item{
@@ -209,6 +211,10 @@ li{
 
 .social-link{
   font-size: 1.5rem;
+}
+
+.fab:hover{
+	color: var(--link-color);
 }
 /*=====  End of Main comment block  ======*/
 

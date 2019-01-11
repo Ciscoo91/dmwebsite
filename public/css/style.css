@@ -38,13 +38,16 @@ li{
 
 .container{
   display: grid;
+	grid-template-rows: auto 100vh;
   grid-template-areas:
     "h h h h h h h h h h h h "
     "m m m m m m m m m m m m "
   ;
-  background: url("https://source.unsplash.com/lR8E-4q3ux0/");
+  /* background: url("https://source.unsplash.com/lR8E-4q3ux0/"); */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/dm.jpg");
   background-size: cover;
-  height: 100vh;
+	background-position: center 15%;
+  height: 100%;
 }
 
 /*=====  End of Container comment block  ======*/
@@ -70,9 +73,11 @@ li{
   margin-left:1rem;
 }
 .nav-list{
-  list-style: none;
+	height: 3rem;
   display:flex;
   justify-content: space-between;
+	align-items:center; 
+  list-style: none;
 }
 
 .list-item{
@@ -132,15 +137,28 @@ li{
 =============================================*/
 
 .main-content{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:repeat(2,1fr);
+	grid-area: m;
+  position: relative;
+  width: 100%;
+	height: 100%;
+	justify-items: center;
   color: var(--secondary-color);
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
+.main-content::before{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 100;
+}
+
 
 .main-presentation{
   grid-row:1;
@@ -151,7 +169,13 @@ li{
 }
 
 .social-media{
+	margin-top:2rem;
   grid-row:2;
+}
+
+.social-list{
+	display: flex;
+
 }
 
 .main-title{
@@ -187,6 +211,10 @@ li{
 
 .social-link{
   font-size: 1.5rem;
+}
+
+.fab:hover{
+	color: var(--link-color);
 }
 /*=====  End of Main comment block  ======*/
 

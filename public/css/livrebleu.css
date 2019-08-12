@@ -185,7 +185,6 @@ footer{
 	background-color: var(--text-color);
 	display: flex;
 	justify-content: space-between;
-	/* padding: .7rem .5rem; */
 	align-items: center;
 }
 

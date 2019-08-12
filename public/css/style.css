@@ -110,7 +110,7 @@ li{
 	display: none;
 	position: absolute;
 	background-color: var(--text-color-rgb);
-	top: 3.5vh;
+	top: 2.3rem;
 	width: 6rem;
 	padding: .4rem .4rem .4rem .1rem;
 	color: var(--link-color);

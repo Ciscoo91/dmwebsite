@@ -91,4 +91,37 @@ app.get('/tosekwatv', (req, res) => {
         .catch(err => { console.log(err) });
 });
 
-app.listen(port);
+app.get('/manager', (req, res) => {
+    res.render('adminManager');
+});
+
+app.post('/manager', urlEncodedParser, (req, res) => {
+    if (!req.body) {
+        console.error(req);
+        res.sendStatus(500);
+    } else {
+
+        let username = req.body.username;
+        let password = req.body.password;
+
+        let ConnectData = new Message({
+            username: username,
+            password: password
+        });
+
+        postedData.save((err, postedMess) => {
+            if (err) {
+                console.error(err);
+            }
+        });
+
+        res.redirect('/admin');
+    }
+});
+
+app.get('/admin', (req, res) => {
+    res.render('admin');
+});
+
+
+app.listen(port, console.log(`server runnig on port: ${port}`));

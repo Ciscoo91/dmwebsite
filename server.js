@@ -91,11 +91,11 @@ app.get('/tosekwatv', (req, res) => {
         .catch(err => { console.log(err) });
 });
 
-app.get('/manager', (req, res) => {
-    res.render('adminManager');
+app.get('/admin', (req, res) => {
+    res.render('adminLoger');
 });
 
-app.post('/manager', urlEncodedParser, (req, res) => {
+app.post('/admin', urlEncodedParser, (req, res) => {
     if (!req.body) {
         console.error(req);
         res.sendStatus(500);
@@ -115,12 +115,12 @@ app.post('/manager', urlEncodedParser, (req, res) => {
             }
         });
 
-        res.redirect('/admin');
+        res.redirect('/manager');
     }
 });
 
-app.get('/admin', (req, res) => {
-    res.render('admin');
+app.get('/manager', (req, res) => {
+    res.render('manager');
 });
 
 

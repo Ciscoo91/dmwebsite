@@ -108,7 +108,9 @@ app.post('/admin', urlEncodedParser, (req, res) => {
 
             let allmessages = Message.find((err, messages) => {
                 if (err) return console.error(err);
-                res.render('adminManager', { messages: messages });
+                res.render('adminManager', {
+                    messages: messages
+                });
             });
 
         } else {

@@ -6,21 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Admin Connect</title>
-  <link rel="stylesheet" href="css/adminManagement.css">
+  <link rel="stylesheet" href="css/adminManager.css">
 </head>
 
 <body>
   <div class="container">
-    <main class="main-content">
-      <form action="/" method="post" class=form--section>
-        <div class=form--title><strong class=form--title--top>Admin Login</strong></div>
-        <div class="form--inputs">
-          <input type="text" name="username" id="username" placeholder="Username" required>
-          <input type="password" name="password" id="password" placeholder="Password" required>
-          <button type="submit" class="btn-submit">Login</button>
-        </div>
-      </form>
-    </main>
+    <% include layout/header %>
+    <div class="main-content">
+      <% for(let message of messages){ %>
+      <div class="main-card">
+        <p class="main-card-names"><strong>Name: </strong><%= message.firstname + ' ' + message.lastname %></p>
+        <p class="main-card-email"><strong>Email: </strong><%= message.email %></p>
+        <p class="main-card-message"><strong>Message: </strong><%= message.message %></p>
+      </div>
+      <% } %>
+    </div>
+    <% include layout/footer %>
   </div>
 </body>
 

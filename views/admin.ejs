@@ -11,13 +11,18 @@
 
 <body>
   <div class="container">
-    <% include 'layout/header' %>
-    <div class="main-content">
-      <div class="main-section"></div>
-      <div class="main-section"></div>
-      <div class="main-section result"></div>
-    </div>
-    <% include 'layout/footer' %>
+    <% include layout/header %>
+    <main class="main-content">
+      <form action="/admin" method="post" class=form--section>
+        <div class=form--title><strong class=form--title--top>Admin Login</strong></div>
+        <div class="form--inputs">
+          <input type="text" name="username" id="username" placeholder="Username" required>
+          <input type="password" name="password" id="password" placeholder="Password" class="form--password" required>
+          <button type="submit" class="btn-submit">Login</button>
+        </div>
+      </form>
+    </main>
+    <% include layout/footer %>
   </div>
 </body>
 

@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
 
+// Connection mongoose to the database URI
 mongoose.connect('mongodb://Ciscoo91:maravilhaC2!@ds115434.mlab.com:15434/dmumengi-test', { useNewUrlParser: true });
 
+// Effective connection the database
 let db = mongoose.connection;
 db.on('error', (err) => { console.error.bind(console, 'An error occured') });
 db.once('open', () => {

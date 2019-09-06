@@ -94,7 +94,7 @@ li{
 
 /*
 **** dropdow item
-** 
+**
 **/
 
 .dropdown-list{
@@ -134,67 +134,52 @@ li{
 =============================================*/
 .main-content{
 	grid-area: m;
-	height: calc(100vh - 100px);
+	height: auto;
 	width: 100%;
 	display: flex;
+    flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #eee;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	font-family: Montserrat, sans-serif;
 }
 
-.form--section{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 40%;
+.main-card{
+    width: 70%;
+    margin: 2rem auto;
+    background-color:var(--link-color-rgba);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.form--title{
-	height: 15%;
-	text-align: center;
-}
 
-.form--inputs{
-	height: 85%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.main-card-names{
+	font-size: 1.3rem;
+	background-color: var(--secondary-color);
+	padding: .6rem;
 }
-
-.form--password{
-	margin: 2rem 0;
-	color: pink;
-}
-
-.form--inputs input{
-	padding: .5rem;
+.main-card-email{
+	padding: .6rem;
 	font-size: 1rem;
-	color: var(--text-color-rgba);
+	opacity: 0.7;
+	background-color: var(--secondary-color);
+}
+.main-card-message{
+	padding: 1rem .6rem;
+	line-height: 2rem;
+	font-size:1rem;
 }
 
-.btn-submit{
-	padding: .5rem;
-	background-color:var(--link-color);
-	font-family: var(--primary-font);
-	font-size: 1rem;
-	color: var(--secondary-color);
-	cursor: pointer;
-	border: none;
-}
 
 
 /*=====  End of Main comment block  ======*/
 
 
-/*=============================================
-=            Footer comment block            =
-=============================================*/
-
 
 /*=============================================
 =            Footer comment block            =
 =============================================*/
-
 
 
 footer{
@@ -348,22 +333,6 @@ footer div{
 		align-items: center;
 	}
 
-	.photo, .description{
-		width: 90%;
-		margin: auto;
-		padding: 0;
-		text-align: center;
-	}
-
-	.dmumengi--name{
-		margin-bottom:1.2rem;
-	}
-
-	.dmumengi--bio{
-		line-height: 1.2rem;
-		margin-bottom: 2rem;
-	}
-
 	footer{
 		height: 15vh;
 		display:flex;
@@ -380,6 +349,4 @@ footer div{
 
 /*=====  End of Tablet comment block  ======*/
 
-
-/*=====  End of Footer comment block  ======*/
 

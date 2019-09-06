@@ -13,6 +13,9 @@
   <div class="container">
     <% include layout/header %>
     <main class="main-content">
+      <% if(erroMessage) { %>
+      <pre><%= errorMessage </pre> %>
+      <% } %>
       <form action="/admin" method="post" class=form--section>
         <div class=form--title><strong class=form--title--top>Admin Login</strong></div>
         <div class="form--inputs">

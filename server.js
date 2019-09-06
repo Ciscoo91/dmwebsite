@@ -54,7 +54,7 @@ app.post('/contact', urlEncodedParser, (req, res) => {
         res.sendStatus(500);
     } else {
         let formData = req.body;
-        console.log("form data: ", formData);
+
 
         // Get request params
         let firstName = req.body.firstname;

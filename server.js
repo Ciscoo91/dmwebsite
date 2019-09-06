@@ -12,7 +12,7 @@ let urlEncodedParser = bodyParser.urlencoded({ extended: false });
 const config = require('./config/config.js');
 
 // Youtube API url
-const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLgZ-2UL8fjcQ5SYWOko2E2cD0HtwZ3FoI&key=${config.key}`;
+const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLgZ-2UL8fjcQ5SYWOko2E2cD0HtwZ3FoI&key=${config.youtube_key}`;
 
 // Mongoose
 
@@ -92,7 +92,7 @@ app.get('/tosekwatv', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-    res.render('adminLoger');
+    res.render('admin');
 });
 
 app.post('/admin', urlEncodedParser, (req, res) => {
@@ -104,23 +104,24 @@ app.post('/admin', urlEncodedParser, (req, res) => {
         let username = req.body.username;
         let password = req.body.password;
 
-        let ConnectData = new Message({
-            username: username,
-            password: password
-        });
+        if (username == config.adminDatas.username && password == config.adminDatas.password) {
 
-        postedData.save((err, postedMess) => {
-            if (err) {
-                console.error(err);
-            }
-        });
+            let allmessages = Message.find((err, messages) => {
+                if (err) return console.error(err);
+                res.render('adminManager', {
+                    messages: messages
+                });
+            });
 
-        res.redirect('/manager');
+        } else {
+            res.redirect('/admin', { errorMessage: "Connection Failed" });
+        }
+
     }
 });
 
 app.get('/manager', (req, res) => {
-    res.render('manager');
+    res.render('adminManager', { message: "access granted :!" });
 });
 
 

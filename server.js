@@ -114,7 +114,7 @@ app.post('/admin', urlEncodedParser, (req, res) => {
             });
 
         } else {
-            res.redirect('/admin', { errorMessage: "Connection Failed" });
+            res.redirect(302, '/admin', { errorMessage: "Connection Failed" });
         }
 
     }

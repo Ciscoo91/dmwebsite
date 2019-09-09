@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root{
+	--primary-color: #0d0d0d;
+	--primary-color-rgb: rgb(13,13,13);
+	--primary-color-rgba: rgba(13,13,13,0.5);
+	--secondary-color: #f2f2f2;
+	--secondary-color-rgb: rgb(242,242,242);
+	--secondary-color-rgba: rgba(242,242,242,0.5);
+	--text-color: #404040;
+	--text-color-rgb: rgb(64,64,64);
+	--text-color-rgba: rgba(64,64,64,0.5);
+	--link-color: #eab436;
+	--link-color-rgb: rgb(234,180,54);
+	--link-color-rgba: rgba(234,180,54,0.5);
+  --box-shadow:rgba(64,64,64,0.2);
+}
+
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+/*=============================================
+=            Container comment block            =
+=============================================*/
+
+.container{
+  display: grid;
+	grid-template-rows: auto 100% auto;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "m m m m m m m m m m m m "
+	"f f f f f f f f f f f f "
+  ;
+  background-size: cover;
+  height: 100%;
+}
+
+/*=====  End of Container comment block  ======*/
+

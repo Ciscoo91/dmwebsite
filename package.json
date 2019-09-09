@@ -19,17 +19,14 @@
     "ejs": "^2.6.1",
     "ejs-lint": "^0.3.0",
     "express": "^4.16.3",
-    "google-auth-library": "^2.0.1",
-    "googleapis": "^33.0.0",
     "mongoose": "^5.3.13",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
-    "gulp-ejs": "^4.1.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-minify": "^3.1.0",
     "gulp-minimize": "^1.0.0",

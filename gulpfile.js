@@ -1,5 +1,6 @@
 const { src, dest, parrallel } = require('gulp');
 const ejs = require('gulp-ejs');
+const del = require('del');
 
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
@@ -9,9 +10,19 @@ const configDir = () => {
         .pipe(dest("dist/config/"))
 }
 
-const ejsDir = () => {
-    return src('views/**/*.ejs')
+const modelDir = () => {
+    return src('model/*.js')
+        .pipe()
 }
 
+const ejsDir = () => {
+    return src('views/**/*.ejs')
+        .pipe(dest("dist/views"))
+}
 
-exports.default = reorganiseDirectory;
+const cleanDir = () => {
+    return del('dist');
+}
+
+exports.ejsDir = ejsDir;
+exports.clean = cleanDir;

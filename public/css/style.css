@@ -264,8 +264,8 @@ li{
 	
 	.list-item{
 		width:100%;
-    padding: .5rem;
-    border-bottom: 1px solid var(--link-color);
+    	padding: .5rem;
+    	border-bottom: 1px solid var(--link-color);
 		height: 1.2rem;
 	}
 	.list-item a{

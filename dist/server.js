@@ -7,23 +7,23 @@ const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 let urlEncodedParser = bodyParser.urlencoded({ extended: false });
 
-// Local Imports
+// Imports
 
-const config = require('./dist/config/config.js');
+const config = require('./config/config.js');
 
 // Youtube API url
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLgZ-2UL8fjcQ5SYWOko2E2cD0HtwZ3FoI&key=${config.youtube_key}`;
 
 // Mongoose
 
-let Message = require('./dist/model/database.js');
+let Message = require('./model/database.js');
 
 
 //Middlewares
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "dist/views"));
-app.use(express.static(path.join(__dirname, "dist/public")));
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 //Routes

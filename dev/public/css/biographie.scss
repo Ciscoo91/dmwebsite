@@ -1,0 +1,150 @@
+@import 'basicConfig';
+@import 'navbar';
+
+/*=============================================
+=            Main comment block            =
+=============================================*/
+
+.main-content{
+  width: 100%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+}
+
+.photo{
+  grid-column: 1;
+  transform: scale(.8);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2), -5px 5px 5px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.description{
+  grid-column: 2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description h1{
+  color: var(--text-color);
+}
+.dmumengi--bio{
+  line-height: 1.5rem;
+  color: var(--text-color-rgb);
+}
+
+/*=====  End of Main comment block  ======*/
+
+@import 'footer';
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	/* à copier partout */
+  .header{
+    width:100%;
+  }
+ 
+  .header{
+		position: relative;
+		width:100%;
+		height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    	padding: .5rem;
+    	border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:3rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+	}
+
+	.content-margin{
+		margin-top: 10rem;
+	}
+
+  /*fin de à copier partout */
+
+	.main-content{
+		width:100%;
+		height: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.photo, .description{
+		width: 90%;
+		margin: auto;
+		padding: 0;
+		text-align: center;
+	}
+
+	.dmumengi--name{
+		margin-bottom:1.2rem;
+	}
+
+	.dmumengi--bio{
+		line-height: 1.2rem;
+		margin-bottom: 2rem;
+	}
+
+}
+
+/*=====  End of Tablet comment block  ======*/

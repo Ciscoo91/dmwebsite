@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <% include layout/google-analytics %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Didier Mumengi Contact</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <% include layout/header %>
+    <main class=main-content>
+      <form action="/contact" method="post" class=form--section>
+        <div class=form--title><strong class=form--title--top>Contactez Nous</strong></div>
+        <div class="form--inputs">
+          <input type=text name="firstname" id="firstname" placeholder="First Name" required>
+          <input type=text name="lastname" id="lastname" placeholder="Last Name" required>
+          <input type=text name="email" id="email" placeholder="Enter your email" required>
+          <textarea name="comment" id="comment" cols=30 rows=10 placeholder="Vôtre message"></textarea>
+          <button type=submit class="btn-submit">Envoyer</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <% include layout/footer %>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

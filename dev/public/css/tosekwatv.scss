@@ -1,0 +1,228 @@
+@import 'basicConfig';
+@import 'navbar';
+
+
+/*=============================================
+=            Main comment block            =
+=============================================*/
+
+.main-content{
+	grid-area: m;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	height: 100%;
+	width: 95%;
+	/* margin: auto; */
+	padding: 2rem 0;
+}
+
+.main-logo{
+	margin: 0 auto; 
+	padding-top: 2rem;
+	width: 35vw;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	text-align: center;
+}
+
+.logo-tosekwa{
+	width: 300px;
+	height: 300px;
+}
+
+.video-container{
+	display: flex;
+	justify-content:center;
+	/* align-items: center; */
+}
+
+.youtube-video{
+	width: 100%;
+	height: auto;
+	margin: 3rem;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	font-family: 'Montserrat', sans-serif;
+	padding:2rem;
+	border-radius:3px;
+	background-color: var(--secondary-color-rgba);
+}
+
+.details{
+	margin: .8rem auto;
+	width:409px;
+	height: auto;
+	text-align:justify;
+}
+
+.details h4{
+	margin: .4rem 0;
+	color: var(--primary-color);
+}
+
+.details p{
+	color: var(--text-color);
+	text-align:left;
+}
+
+/*=====  End of Main comment block  ======*/
+
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	/* à copier partout */
+  .header{
+    width:100%;
+  }
+ 
+  .header{
+		position: relative;
+		width:100%;
+		height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    padding: .5rem;
+    border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:3rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+	}
+
+	.content-margin{
+		margin-top: 10rem;
+	}
+
+  /*fin de à copier partout */
+
+	.main-content{
+		width:100%;
+		height: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		margin:0;
+		padding:0;
+	}
+
+	.video-container{
+		width: 100%;
+		margin: auto 0;
+	}
+
+	.youtube-video, .details{
+		width: 100%;
+		margin:2rem 0;
+		padding:0;
+	}
+
+	iframe, .video-title, .video-description{
+		width: 90%;
+		height: auto;
+		text-align: center;
+	}
+
+	iframe{
+		min-height: 380px;
+	}
+
+	
+}
+
+/*=====  End of Tablet comment block  ======*/
+
+
+/*=============================================
+=            Mobile comment block            =
+=============================================*/
+
+@media screen and (max-width: 480px){
+
+	.main-logo{
+		width: 95%;
+		padding:0 1rem;
+	}
+
+	.youtube-video, .details{
+		width: 100%;
+		margin:2rem 0;
+		padding:0;
+	}
+
+	iframe, .video-title, .video-description{
+		width: 90%;
+		height: auto;
+		text-align: center;
+	}
+
+	.video-description{
+		margin:0 auto;
+		text-align:center;
+	}
+
+	iframe{
+		min-height: 200px;
+	}
+}
+
+/*=====  End of Mobile comment block  ======*/
+
+@import 'footer';

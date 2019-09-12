@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+:root{
+	--primary-color: #0d0d0d;
+	--primary-color-rgb: rgb(13,13,13);
+	--primary-color-rgb: rgba(13,13,13,0.5);
+	--secondary-color: #f2f2f2;
+	--secondary-color-rgb: rgb(242,242,242);
+	--secondary-color-rgba: rgba(242,242,242,0.5);
+	--text-color: #404040;
+	--text-color-rgb: rgb(64,64,64);
+	--text-color-rgba: rgba(64,64,64,0.5);
+	--link-color: #eab436;
+	--link-color-rgb: rgb(234,180,54);
+	--link-color-rgba: rgba(234,180,54,0.5);
+}
+
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+/*=============================================
+=            Container comment block            =
+=============================================*/
+
+.container{
+  display: grid;
+	grid-template-rows: auto 100vh;
+  grid-template-areas:
+    "h h h h h h h h h h h h "
+    "m m m m m m m m m m m m "
+  ;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/dm.jpg");
+  background-size: cover;
+    background-position: center 15%;
+  height: 100%;
+}
+
+/*=====  End of Container comment block  ======*/
+
+@import 'navbar';
+
+/*=============================================
+=            Main comment block            =
+=============================================*/
+
+.main-content{
+	grid-area: m;
+  position: relative;
+  width: 100%;
+	height: 100%;
+	justify-items: center;
+  color: var(--secondary-color);
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-content::before{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 100;
+}
+
+
+.main-presentation{
+  grid-row:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media{
+	margin-top:2rem;
+  grid-row:2;
+}
+
+.social-list{
+	display: flex;
+
+}
+
+.main-title{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description{
+  margin-bottom: 1rem;
+}
+
+.about-btn{
+  padding: .6rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 2px;
+}
+
+.about-btn:hover{
+  background-color: var(--secondary-color-rgba);
+}
+
+.social-media{
+  width: 100px;
+  align-self: center;
+  justify-self: center;
+}
+.social-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link{
+  font-size: 1.5rem;
+}
+
+.fab:hover{
+	color: var(--link-color);
+}
+/*=====  End of Main comment block  ======*/
+
+
+/*=============================================
+=            Tablet comment block            =
+=============================================*/
+@media screen and (max-width: 840px){
+
+	/* à copier partout */
+  .header{
+    width:100%;
+		min-height: 3rem;
+  }
+ 
+  .header{
+		position: relative;
+		width:100%;
+		height: 3rem;
+		background-color:var(--text-color-rgb);
+	}
+	
+	.navbar{
+		display:none;
+	}
+	.hammenu{
+		display:flex;
+		position: absolute;
+		top: .5rem;
+		right:1rem;
+		font-size:1.6rem;
+		cursor: pointer;
+	}
+	
+	.nav-list{
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content: space-between;
+	}
+	
+	.list-item{
+		width:100%;
+    	padding: .5rem;
+    	border-bottom: 1px solid var(--link-color);
+		height: 1.2rem;
+	}
+	.list-item a{
+		width:100%;
+		padding-left: 1rem;
+	}
+
+	.list-item:hover{
+		color:#fff;
+		background-color: var(--text-color);
+	}
+
+	.dropdown-item{
+		position: absolute;
+		left: 6rem;
+		top:0;
+		padding:.5rem 0;
+	}
+
+	.menu-arrow{
+		transform: rotate(90deg);
+	}
+
+	.active-navbar{
+		position: absolute;
+		top:3rem;
+		flex-direction:column;
+		display: flex;
+		background-color: var(--secondary-color);
+		color: var(--link-color);
+		width: 100vw;
+		height: auto;
+		z-index: 1000;
+	}
+
+	.content-margin{
+		margin-top: 5rem;
+	}
+
+  /*fin de à copier partout */
+
+	.main-content{
+		width:100%;
+		height: auto;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.social-list{
+		margin-top: 2rem;
+	}
+
+	.fab:hover{
+		color: var(--link-color);
+	}
+
+}
+
+/*=====  End of Tablet comment block  ======*/
+
+@media screen and (max-width: 480px){
+
+	.main-content{
+		display: grid;
+		grid-template-areas: 
+			'main'
+			'social'
+		;
+	}
+
+	.main-presentation{
+		align-items: center;
+		grid-area:main;
+	}
+	.main-title{
+		margin-top: 2rem;
+		font-size:2rem;
+		text-align: center;
+	}
+
+	.social-media{
+		grid-area:social;
+	}
+
+	.social-list{
+		margin-top:0;
+	}
+
+	.fab:hover{
+		color: var(--link-color);
+	}
+
+	footer{
+		padding: 0;
+	}
+
+}

@@ -1,6 +1,5 @@
-const { src, dest, watch, parallel, lastRun } = require('gulp');
+const { src, dest, watch, parallel, series, lastRun } = require('gulp');
 const del = require('del');
-const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
@@ -33,19 +32,23 @@ const cleanDir = () => {
     return del('dist');
 }
 
+const cleanCss = () => {
+    return del('dist/public/css')
+}
+
 const packages = () => {
-    return src(['package.json', 'package-lock.json', 'dev/dev/server.js'])
+    return src(['package.json', 'package-lock.json'])
         .pipe(dest('dist/'))
 }
 
 const css = () => {
-    return src('dev/dev/public/css/*.scss')
+    return src('dev/public/css/*.scss')
         .pipe(sass())
         .pipe(dest('dist/public/css/'))
 }
 
 const watcher = () => {
-    watch('dev/dev/public/css/*.scss', css)
+    watch('dev/public/css/*.scss', css)
 }
 
 
@@ -55,11 +58,13 @@ exports.packages = packages;
 exports.model = modelDir;
 exports.config = configDir;
 exports.css = css;
+exports.cleanCss = cleanCss;
 exports.staticJs = staticJs;
 exports.staticImg = staticImg;
 
-exports.default = {
-    default: parallel(ejsDir, packages, modelDir, configDir, staticImg, staticJs, css),
-    watch: watcher
+exports.default = parallel(ejsDir, modelDir, configDir, staticImg, staticJs, css)
+exports.watcher = () => {
+    watch('dev/public/css/*.scss', css)
 }
+
 

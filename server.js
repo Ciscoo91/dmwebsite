@@ -106,7 +106,7 @@ app.post('/admin', urlEncodedParser, (req, res) => {
 
         if (username == config.adminDatas.username && password == config.adminDatas.password) {
 
-            let allmessages = Message.find((err, messages) => {
+            Message.find((err, messages) => {
                 if (err) return console.error(err);
                 res.render('adminManager', {
                     messages: messages
@@ -114,7 +114,7 @@ app.post('/admin', urlEncodedParser, (req, res) => {
             });
 
         } else {
-            res.redirect(302, '/admin', { errorMessage: "Connection Failed" });
+            res.render('/admin', { errorMessage: "Connection Failed" });
         }
 
     }

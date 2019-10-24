@@ -178,12 +178,6 @@ li {
   font-size: 1.5rem; }
 
 /*=====  End of Main comment block  ======*/
-@media screen and (max-width: 1200px) {
-  .card {
-    width: 100%; }
-  .description-text {
-    width: 100%; } }
-
 /*=============================================
 =            Footer comment block            =
 =============================================*/
@@ -245,6 +239,12 @@ footer div {
     padding: 0; }
   .footer-social .fab {
     font-size: 1.2rem; } }
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 100%; }
+  .description-text {
+    width: 100%; } }
 
 /*=============================================
 =            Tablet comment block            =

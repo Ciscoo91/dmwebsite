@@ -22,7 +22,7 @@
     "google-auth-library": "^2.0.1",
     "googleapis": "^33.0.0",
     "mongoose": "^5.3.13",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
